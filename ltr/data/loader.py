@@ -2,7 +2,9 @@ import torch
 import torch.utils.data.dataloader
 import importlib
 import collections
-from torch._six import string_classes, int_classes
+# related issues: https://github.com/visionml/pytracking/issues/272
+from torch._six import string_classes
+int_classes = (bool, int)
 from pytracking import TensorDict, TensorList
 
 
